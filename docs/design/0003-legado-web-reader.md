@@ -509,6 +509,10 @@ legado-web-reader/
 | 日期 | 变更 | 原因 |
 |------|------|------|
 | 2026-02-21 | 初始设计 | DD-0003 创建 |
+| 2026-02-21 | 前端使用 Vue 3 + Vite + Pinia + TailwindCSS（无 TypeScript strict build，用 JS-compatible TS） | 与设计文档一致，vue-tsc strict 降级为 vite build only 以加速开发 |
+| 2026-02-21 | 路由使用 query params 而非 path params（`/book?sourceId=...&bookUrl=...`） | bookUrl 含完整 URL 不适合做 path segment，query params 更灵活 |
+| 2026-02-21 | 书架数据、阅读进度、阅读器设置均存 localStorage | 符合 MVP 设计，后续可迁移后端 |
+| 2026-02-21 | 阅读器支持键盘方向键翻页（←/→ 或 ↑/↓） | 桌面端体验优化 |
 
 ---
 

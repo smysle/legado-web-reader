@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sepia theme base */
+.sepia body,
+.sepia #app {
+  background-color: #f5e6d3;
+  color: #5e3f2a;
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+/* Reader content styling */
+.reader-content p {
+  margin-bottom: 1em;
+  text-indent: 2em;
+}
+.reader-content br + br {
+  display: block;
+  margin-top: 0.5em;
+  content: '';
+}
